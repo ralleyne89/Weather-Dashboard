@@ -1,0 +1,52 @@
+
+body {
+    background-color: lightgray;
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgb(0, 211, 0) !important;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(0, 211, 0);
+    border: 0;
+    width: 30%;
+}
+
+h1, .lead {
+    text-align: center;
+}
+
+#searchbar {
+    display: block;
+    margin: 20px auto;
+    height: 40px;
+    width: 50%;
+}
+
+.jumbotron {
+
+  width: 100%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  background-image: url("https://i.pinimg.com/originals/c2/a1/2a/c2a12a9aed2a098dcfea3519b6f57977.png");
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.my-4 {
+    background-color: white;
+    opacity: 0.3;
+}
+
+.card-forecast {
+    width: 18rem;
+    margin: 1%;
+    float: left;
+}
