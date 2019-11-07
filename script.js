@@ -1,35 +1,21 @@
 const queryKey = `http://api.openweathermap.org/data/2.5/weather?q=California,us&units=imperial&APPID=7505e48c424a1cbfe348c47894273c19`
-const newQuery = "http://api.openweathermap.org/data/2.5/forecast?q=California,us&units=imperial&APPID=7505e48c424a1cbfe348c47894273c19"
+const newQuery = `http://api.openweathermap.org/data/2.5/forecast?q=California,us&units=imperial&APPID=7505e48c424a1cbfe348c47894273c19`
 let body = $('body');
 
-
-// AJAX call for current weather 
-$.ajax({
-    url: queryKey,
+$('#searchbtn').on('click', function(){
+  let userCity = $('#searchbar').val();
+  let apiLink = `http://api.openweathermap.org/data/2.5/weather?q=${userCity},us&units=imperial&APPID=7505e48c424a1cbfe348c47894273c19`
+  let newApi = `http://api.openweathermap.org/data/2.5/forecast?q=${userCity},us&units=imperial&APPID=7505e48c424a1cbfe348c47894273c19`
+  console.log(userCity)
+  console.log(apiLink)
+  $.ajax({
+    url: apiLink,
     dataType: "json"
 }).then(function(city) {
     let array = city.weather
     let rawJson = JSON.stringify(city);
     let json = JSON.parse(rawJson);
     console.log(json);
-// let jumbotron = $('<div>').html(`<div class="jumbotron">
-// <h1 class="display-4">Welcome To WeatherDash</h1>
-// <p class="lead">Get all the most accurate weather reports available!</p>
-// <hr class="my-4">
-// <p class="lead">Please enter your city to get started</p>
-// <input type="search" name="" id="searchbar">
-// <a class="btn btn-primary btn-lg" href="#" role="button" id="searchbtn">SEARCH</a>
-// </div>`)
-
-// body.append(jumbotron);
-
-// this will be the function to input the city to populate the cards
-$('#searchbtn').on('click', function(userCity){
-    userCity = $('#searchbar').val();
- 
-    console.log(userCity)
- 
- })
 
     for(i = 0; i < array.length; i++) {
 
@@ -55,9 +41,9 @@ $('#searchbtn').on('click', function(userCity){
     }
 });
 
-
+// AJAX call for current weather 
 $.ajax({
-    url: newQuery,
+    url: newApi,
     dataType: "json"
 }).then(function(city){
     let list = city.list;
@@ -149,4 +135,8 @@ $.ajax({
       body.append(forecast);
     };
 })
+})
+
+
+
 
