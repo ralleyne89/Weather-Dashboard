@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-<!-- Nav Bar -->
-<!-- <nav class="navbar navbar-light bg-light">
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <!-- <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
       <img src="" width="30" height="30" alt="">
     </a>
   </nav> -->
 
+    <!-- header with search bar-->
+    <div class="jumbotron">
+      <h6>Welcome To</h6>
+      <h1 class="display-4">WeatherDash</h1>
+      <p class="lead">Get all the most accurate weather reports available!</p>
+      <hr class="my-4" />
+      <p class="lead">Please enter your city to get started</p>
+      <input type="search" name="" id="searchbar" />
+      <a class="btn btn-primary btn-lg" href="#" role="button" id="searchbtn"
+        >SEARCH</a
+      >
+    </div>
 
-      <!-- header with search bar-->
-      <div class="jumbotron">
-        <h6>Welcome To</h6>
-        <h1 class="display-4">WeatherDash</h1>
-        <p class="lead">Get all the most accurate weather reports available!</p>
-        <hr class="my-4">
-        <p class="lead">Please enter your city to get started</p>
-        <input type="search" name="" id="searchbar">
-        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="ajax()" id="searchbtn">SEARCH</a>
-        </div>
-
-
-
+    <div class="container">
+      <div class="card-title">
+          <p>Weather</p>
+      </div>
+      <div class="notification"> </div>
+      <div class="weather-container">
+          <div class="weather-icon">
+              <img src="icons/unknown.png" alt="">
+          </div>
+          <div class="temperature-value">
+              <p>- °<span>C</span></p>
+          </div>
+          <div class="temperature-description">
+              <p> - </p>
+          </div>
+          <div class="location">
+              <p>-</p>
+          </div>
+      </div>
+  </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
